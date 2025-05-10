@@ -29,7 +29,6 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 // const s3PostHandler = require("./app/routes/s3_post_router");
 // app.use("/api", s3PostHandler);
 
-
 // const bookingRoute = require("./app/routes/booking.routes");
 // app.use("/api", bookingRoute);
 

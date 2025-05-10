@@ -1,19 +1,19 @@
 // Import the mysql2 module Promise Wrapper 
 const mysql = require('mysql2/promise');
-
 // Prepare connection parameters we use to connect to the database
 const dbConfig = {
   connectionLimit: 10,
-  password: process.env.DB_PASS,
-  user: process.env.DB_USER,
-  host: process.env.DB_HOST,
-  database: process.env.DB_NAME,
+  password: "XsoU7G0CfGms7m6WCJ6Q",
+  user: "uewyukrbgpgtfvs0",
+  host: "btcrl7wiymqibjcxebdw-mysql.services.clever-cloud.com",
+  database: "btcrl7wiymqibjcxebdw",
 };
 
 console.log('Database config:', dbConfig);
 
 // Create the connection pool  
 const pool = mysql.createPool(dbConfig);
+
 
 // Prepare a function that will execute the SQL queries asynchronously
 async function query(sql, params) {
