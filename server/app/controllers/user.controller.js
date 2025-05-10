@@ -73,7 +73,7 @@ async function login(req, res) {
   try {
     // Check if the user exists, including the 'role' field
     const user = await dbConnection.query(
-      "SELECT id, password, role FROM Users WHERE email = ?",
+      "SELECT id, password,full_name, role FROM Users WHERE email = ?",
       [email]
     );
 
@@ -101,7 +101,7 @@ async function login(req, res) {
     }
 
     // Generate a token with the user's role included
-    const username = userData.userName;
+    const username = userData.full_name;
     const userid = userData.id;
     const role = userData.role; // Get the role from the database
 
